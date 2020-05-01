@@ -1,0 +1,149 @@
+<!-- Desenvolvedor: Mateus Mendonça Monteiro RA: 101911599 BCC - 3ºTermo -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link rel="icon" type="imagem/png" href="Images/icon-site.png" />
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+
+<body class="bg-color">
+    <div class="container-fluid h-100">
+        <div class="row form-cadastro justify-content-center">
+            <div class="col-3 align-self-center area-form border rounded">
+                <div class="row justify-content-center mt-2 mb-2">
+                    <h1 class="display-4"> Cadastro de Alunos</h1>
+                </div>
+                <!--<span class="small d-block text-center"><b>Crie seu Cadastro logo abaixo aluno</b></span>-->
+                <form data-Form class="was-validated">
+
+                    <!-- Nome Completo -->
+                    <div class="input-group mt-2">
+                        <input data-Nome type="text" name="nome" class="form-control bg-light text-dark btn-outline-secondary" placeholder="Nome Completo" required/>
+                    </div>
+
+                    <!-- E-Mail -->
+                    <div class="input-group mt-2">
+                        <input data-Email type="email" name="email" class="form-control bg-light text-dark btn-outline-secondary" placeholder="example@gmail.com" required/>
+                    </div>
+
+                    <!-- RA -->
+                    <div class="form-group mt-2">
+                        <input data-RA class="form-control bg-light text-dark btn-outline-secondary" type="text" id="RegAcad" name="RegAcad" placeholder="Digite o seu RA aqui..." required/>
+                    </div>
+
+                    <!-- Data de Nascimento -->
+                    <div class="form-group row">
+                        <div class="col-5 mt-2">
+                            <label for="dataNasc" class="col-form-label"> Data de Nascimento:</label>
+                        </div>
+                        <div class="input-group col mt-2 m-auto">
+                            <input data-DataNasc name="dataNasc" type="date" class="form-control text-dark bg-light btn-outline-secondary " required>
+                        </div>
+                    </div>
+
+
+                    <!-- Cidade -->
+                    <div class="input-group mt-2">
+                        <select data-Cidade class="custom-select bg-light text-dark outline-secondary" id="inputGroupSelect01" required>
+                            <option value="">Selecione sua Cidade...</option>
+                            <option name="cidade" value="Presidente Prudente">Presidente Prudente</option>
+                            <option name="cidade" value="Pirapozinho">Pirapozinho</option>
+                            <option name="cidade" value="Regente Feijo">Regente Feijó</option>
+                            <option name="cidade" value="Tarabai">Tarabai</option>
+                            <option name="cidade" value="Taciba">Taciba</option>
+                            <option name="cidade" value="Jau">Jáu</option>]
+                            <option name="cidade" value="Guaruja">Guarujá</option>
+                        </select>
+                    </div>
+
+                    <!-- Seleção do Curso -->
+                    <div class="input-group mt-2">
+                        <select data-Curso class="custom-select bg-light text-dark btn-outline-secondary" id="inputGroupSelect02" required>
+                          <option value="">Selecione o curso...</option>
+                          <option name="curso" value="Ciencia Da Computacao">Ciência da Computação</option>
+                          <option name="curso" value="Sistemas Da Informacao">Sistemas de Informação</option>
+                          <option name="curso" value="Redes De Computadores">Redes de Computadores</option>
+                          <option name="curso" value="Sistemas Para Internet">Sistemas para Internet</option>
+                          <option name="curso" value="Jogos Digitais">Jogos Digitais</option>
+                          <option name="curso" value="Gestao De TI">Gestão de TI</option>
+                          <option name="curso" value="Engenharia De Software">Engenharia de Software</option>
+                        </select>
+                    </div>
+
+                    <!--Opnião-->
+                    <div class="form-group row">
+                        <div class="col mt-2">
+                            <label class="col-form-label">Esta gostando do curso:</label>
+                        </div>
+                        <!--group-toggle retira as bolinhas do radio-->
+                        <div class="col mt-2">
+                            <div id="opniao" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-primary active">
+                                        <input type="radio" name="gosta" id="gosta" value="Sim" autocomplete="off" checked> Sim
+                                    </label>
+                                <label class="btn btn-outline-primary">
+                                        <input type="radio" name="gosta" id="naoGosta" value="Não" autocomplete="off"> Não
+                                    </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Nível de Dificuldade-->
+                    <div class="form-group row">
+                        <div class="col mt-2">
+                            <label class="col-form-label">Dificuldade do Curso:</label>
+                        </div>
+                        <div class="col mt-2">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-primary active">
+                                    <input type="radio" name="dificuldade" id="facil" value="facil" autocomplete="off" checked> Facil
+                                </label>
+                                <label class="btn btn-outline-primary">
+                                    <input type="radio" name="dificuldade" id="medio" value="medio" autocomplete="off"> Médio
+                                </label>
+                                <label class="btn btn-outline-primary">
+                                    <input type="radio" name="dificuldade" id="dificl" value="dificil" autocomplete="off"> Díficil
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="reset" class="btn btn-secondary btn-block bg-danger mt-2">LIMPAR</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-secondary btn-block bg-primary mb-2 mt-2">Cadastrar</button>
+                        </div>
+                    </div>
+
+                </form>
+                <div data-Mensagens></div>
+                <div data-Tabela></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+</footer>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!--Nosso arquivo com nossos scripts-->
+<script src="Script/script.js"></script>
+<script src="Script/classes.js"></script>
+
+</html>
